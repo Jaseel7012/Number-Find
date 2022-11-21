@@ -23,6 +23,34 @@ public class FindNumber {
             System.out.println(n3+" is small");
         }
     }
+    public static void checkprime(int n){
+        if (n<2){
+            System.out.println(n+" Not prime number");
+        }
+        int c=0;
+        for (int i=2;i<=n;i++){
+            if(n%i==0){
+                c+=1;
+
+            }
+
+        }
+        if(c>2){
+            System.out.println("Not Prime number");
+        }else {
+            System.out.println(" prime number");
+        }
+
+
+    }
+    public  static void checkeven(int n){
+        if(n%2==0){
+            System.out.println(n+" is an even number");
+        }
+        else {
+            System.out.println("Not an even number");
+        }
+    }
 
     public static void main(String[] args) {
         System.out.println("Please enter number \n 1-Find Largest of 3 numbers \n 2-find smallest of 3 numbers " +
@@ -40,6 +68,16 @@ public class FindNumber {
                 Scanner sc2=new Scanner(System.in);
                 smal(sc2.nextInt(),sc2.nextInt(),sc2.nextInt());
                 break;
+            case 3:
+                System.out.println("Enter number");
+                Scanner sc3=new Scanner(System.in);
+
+                checkprime(sc3.nextInt());
+                break;
+            case 4:
+                System.out.println("Enter number");
+                Scanner sc4=new Scanner(System.in);
+                checkeven(sc4.nextInt());
 
 
         }
